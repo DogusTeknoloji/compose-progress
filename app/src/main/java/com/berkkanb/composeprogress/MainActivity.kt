@@ -3,6 +3,7 @@ package com.berkkanb.composeprogress
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -27,16 +28,40 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Column() {
+                        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             MyProgress(
                                 modifier = Modifier
                                     .height(30.dp)
                                     .width(200.dp),
-                                progressColor = Color.Magenta,
-                                progressBackgroundColor = Color.LightGray,
-                                indicators = listOf(0.1f,0.9f),
+                                progressColor = Color(0xFF6633CC),
+                                progressBackgroundColor = Color(0xFFE0E0E0),
+                                indicators = listOf(0.1f,0.2f,0.3f,0.6f),
+                                fillProgressBy = 0.77f,
+                                cornerRadius = CornerRadius(30f,30f),
+                                animationDuration = 700,
+                                animationDelay = 0
+                            )
+                            MyProgress(
+                                modifier = Modifier
+                                    .height(30.dp)
+                                    .width(200.dp),
+                                progressColor = Color(0xFF6633CC),
+                                progressBackgroundColor = Color(0xFFE0E0E0),
+                                indicators = listOf(0.3f,0.5f,0.7f,0.85f),
                                 fillProgressBy = 0.95f,
-                                cornerRadius = CornerRadius(100f,100f)
+                                cornerRadius = CornerRadius(30f,30f),
+                                animationDuration = 700,
+                                animationDelay = 200
+                            )
+                            MyProgress(
+                                modifier = Modifier
+                                    .height(30.dp)
+                                    .width(200.dp),
+                                progressColor = Color(0xFF6633CC),
+                                progressBackgroundColor = Color(0xFFE0E0E0),
+                                indicators = listOf(0.3f,0.5f,0.7f,0.85f),
+                                fillProgressBy = 0.95f,
+                                cornerRadius = CornerRadius(30f,30f)
                             )
                         }
                     }

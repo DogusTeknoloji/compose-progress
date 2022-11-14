@@ -28,7 +28,8 @@ fun MyProgress(
     indicatorColor: Color = Color.White,
     indicatorWidth: Float = 5f,
     cornerRadius: CornerRadius = CornerRadius.Zero,
-    animationDuration: Int = 700
+    animationDuration: Int,
+    animationDelay:Int = 0
 ) {
     val targetPercentage = remember {
         Animatable(0f)
@@ -38,7 +39,8 @@ fun MyProgress(
             targetValue = fillProgressBy,
             animationSpec = tween(
                 durationMillis = animationDuration,
-                easing = LinearOutSlowInEasing
+                easing = LinearOutSlowInEasing,
+                delayMillis = animationDelay
             )
         )
     }
@@ -83,3 +85,55 @@ fun MyProgress(
     }
 }
 
+@Composable
+fun MyProgress(
+    modifier: Modifier,
+    progressColor: Color,
+    progressBackgroundColor: Color,
+    fillProgressBy: Float,
+    indicators: List<Float>? = null,
+    indicatorColor: Color = Color.White,
+    indicatorWidth: Float = 5f,
+    cornerRadius: CornerRadius = CornerRadius.Zero
+) {
+
+    Canvas(modifier = modifier) {
+        drawRoundRect(
+            color = progressBackgroundColor,
+            cornerRadius = cornerRadius
+        )
+        drawRoundRect(
+            color = progressColor,
+            size = Size(
+                width = fillProgressBy * this.size.width,
+                height = this.size.height
+            ),
+            cornerRadius = cornerRadius
+        )
+        indicators?.forEach {
+            drawLine(
+                color = indicatorColor,
+                start = Offset(x = it * this.size.width, y = 0f),
+                end = Offset(x = it * this.size.width, y = this.size.height),
+                strokeWidth = indicatorWidth
+            )
+        }
+        /*
+        val path = Path().apply {
+            addRoundRect(
+                RoundRect(
+                    rect = Rect(
+                        offset = Offset(0f, 0f),
+                        size = Size(
+                            width = targetPercentage.value * this@Canvas.size.width,
+                            height = this@Canvas.size.height
+                        )
+                    ),
+                    bottomLeft = cornerRadius,
+                    topLeft = cornerRadius,
+                )
+            )
+        }
+        drawPath(path, color = progressColor)*/
+    }
+}
