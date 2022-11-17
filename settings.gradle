@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ComposeProgress"
 include ':app'
+include ':ComposeProgressLib'
+include ':lib'
