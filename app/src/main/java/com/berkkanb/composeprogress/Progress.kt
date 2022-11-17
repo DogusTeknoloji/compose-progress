@@ -10,9 +10,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.RoundRect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.VectorPainter
@@ -49,18 +52,22 @@ fun MyProgress(
     }
     Canvas(modifier = modifier) {
         val canvasSize = this.size
-        drawRoundRect(
-            color = progressBackgroundColor,
-            cornerRadius = cornerRadius
-        )
-        drawRoundRect(
-            color = progressColor,
-            size = Size(
-                width = targetPercentage.value * this.size.width,
-                height = this.size.height
-            ),
-            cornerRadius = cornerRadius
-        )
+        val backgroundPath = Path()
+        val backgroundRoundRect = RoundRect(0f,0f,canvasSize.width,canvasSize.height,cornerRadius)
+
+        backgroundPath.addRoundRect(roundRect = backgroundRoundRect)
+
+        clipPath(backgroundPath){
+            drawPath(path = backgroundPath, color = progressBackgroundColor)
+            drawRect(
+                color = progressColor,
+                size = Size(
+                    width = targetPercentage.value * this.size.width,
+                    height = this.size.height
+                )
+            )
+        }
+
         indicators?.let { indicatorList ->
             drawIndicators(fillProgressBy,indicatorList,indicatorColor,indicatorWidth,canvasSize,stepImageVectorMultiplier,painter)
         }
@@ -101,21 +108,3 @@ fun DrawScope.drawIndicators(
         }
     }
 }
-
-/*
-        val path = Path().apply {
-            addRoundRect(
-                RoundRect(
-                    rect = Rect(
-                        offset = Offset(0f, 0f),
-                        size = Size(
-                            width = targetPercentage.value * this@Canvas.size.width,
-                            height = this@Canvas.size.height
-                        )
-                    ),
-                    bottomLeft = cornerRadius,
-                    topLeft = cornerRadius,
-                )
-            )
-        }
-        drawPath(path, color = progressColor)*/
