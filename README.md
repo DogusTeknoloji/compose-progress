@@ -110,7 +110,7 @@ fun StepProgress(
 
 <img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/ss.jpg" width="300">
 
-#### Basic StepProgress without any indicator and Icon
+#### Basic StepProgress with Icon
 
   
 ## Note that
