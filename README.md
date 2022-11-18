@@ -1,4 +1,4 @@
-
+[![](https://jitpack.io/v/BerkkanB/ComposeProgress.svg)](https://jitpack.io/#BerkkanB/ComposeProgress)
 # Jetpack Compose Progress
 
 This library aims to develop multiple customizable types of progress components.
