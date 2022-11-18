@@ -16,7 +16,7 @@ This library aims to develop multiple customizable types of progress components.
   
 ## Add Your Project
 
-Add these to your gradle files;
+Add it in your root build.gradle at the end of repositories:
 
 ```bash
   allprojects {
