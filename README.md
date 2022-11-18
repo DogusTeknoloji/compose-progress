@@ -91,19 +91,26 @@ fun StepProgress(
   
 ## Bar Progress
 
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/ss3.jpg" width="300">
+
 #### Basic BarProgress without any indicator and Icon
 
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/ss2.jpg" width="300">
+
 #### Basic BarProgress with indicators
 
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-#### Basic BarProgress with indicators and icon
+<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/Screenrecorder-2022-11-18-11-19-58-608.gif" width="300">
 
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 #### Animated BarProgress with indicators and icon
 
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+## Step Progress
+
+<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/ss.jpg" width="300">
+
 #### Basic StepProgress without any indicator and Icon
 
+  
+## Note that
+
+You can create any shape you want with modifier parameter, these screenshots are just basic samples.
   
