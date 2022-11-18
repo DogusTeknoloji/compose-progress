@@ -113,4 +113,9 @@ fun StepProgress(
 ## Note that
 
 You can create any shape you want with modifier parameter, these screenshots are just basic samples.
-  
+
+## What is next ?
+
+- Animated StepBar
+- Different types of progress
+- More customizable components
