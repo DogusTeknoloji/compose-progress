@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/BerkkanB/ComposeProgress.svg)](https://jitpack.io/#BerkkanB/ComposeProgress)
+[![](https://jitpack.io/v/DogusTeknoloji/ComposeProgress.svg)](https://jitpack.io/#BerkkanB/ComposeProgress)
 # Jetpack Compose Progress
 
 This library aims to develop multiple customizable types of progress components.
@@ -31,7 +31,7 @@ Add the dependency:
 
 ```bash
   dependencies {
-	    implementation 'com.github.BerkkanB:ComposeProgress:Tag'
+	    implementation 'com.github.DogusTeknoloji:ComposeProgress:Tag'
 	}
 ```
 
@@ -94,21 +94,21 @@ fun StepProgress(
   
 ## Bar Progress
 
-<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/ss3.jpg" width="300">
+<img src="https://github.com/DogusTeknoloji/ComposeProgress/blob/master/ss/ss3.jpg" width="300">
 
 #### Basic BarProgress without any indicator and Icon
 
-<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/ss2.jpg" width="300">
+<img src="https://github.com/DogusTeknoloji/ComposeProgress/blob/master/ss/ss2.jpg" width="300">
 
 #### Basic BarProgress with indicators
 
-<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/Screenrecorder-2022-11-18-11-19-58-608.gif" width="300">
+<img src="https://github.com/DogusTeknoloji/ComposeProgress/blob/master/ss/Screenrecorder-2022-11-18-11-19-58-608.gif" width="300">
 
 #### Animated BarProgress with indicators and icon
 
 ## Step Progress
 
-<img src="https://github.com/BerkkanB/ComposeProgress/blob/master/ss/ss.jpg" width="300">
+<img src="https://github.com/DogusTeknoloji/ComposeProgress/blob/master/ss/ss.jpg" width="300">
 
 #### Basic StepProgress with Icon
 
