@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/DogusTeknoloji/ComposeProgress.svg)](https://jitpack.io/#BerkkanB/ComposeProgress)
+[![](https://jitpack.io/v/DogusTeknoloji/compose-progress.svg)](https://jitpack.io/#DogusTeknoloji/compose-progress)
 # Jetpack Compose Progress
 
 This library aims to develop multiple customizable types of progress components.
@@ -31,7 +31,7 @@ Add the dependency:
 
 ```bash
   dependencies {
-	    implementation 'com.github.DogusTeknoloji:ComposeProgress:Tag'
+	    implementation 'com.github.DogusTeknoloji:compose-progress:version'
 	}
 ```
 
